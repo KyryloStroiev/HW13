@@ -18,24 +18,24 @@ public  class ProductAdd : IProduct
         Priceproduct = priceproduct;
     }
    
-    //public void AddProduct(string path)
-    //{
-    //    var productadd = new ProductAdd(Codeproduct, Nameproduct, Priceproduct);
-        
-    //    Console.WriteLine("Ведiть данi про товар:");
-    //    Console.WriteLine("Код товару, назва, і ціна");
-    //    string cproduct = Console.ReadLine();
-    //    Codeproduct = Convert.ToInt32(cproduct);
-    //    Nameproduct = Console.ReadLine();
-    //    string cpriceproduct = Console.ReadLine();
-    //    Priceproduct = Convert.ToInt32(cpriceproduct);
+       public void AddProduct(string path)
+    {
+        var productadd = new ProductAdd(Codeproduct, Nameproduct, Priceproduct);
 
-    //    File.AppendAllLines(path, new[] { $"{Codeproduct}, {Nameproduct}, {Priceproduct}" });
-    //}
-    //public void AddProductPrint()
-    //{
-    //    var AddFile = @"C:\Users\User\Desktop\HM\HW13\HW13\Product.txt";
-    //    AddProduct(AddFile);
-    //}
+        Console.WriteLine("Ведiть данi про товар:");
+        Console.WriteLine("Код товару, назва, і ціна");
+        string cproduct = Console.ReadLine();
+        Codeproduct = Convert.ToInt32(cproduct);
+        Nameproduct = Console.ReadLine();
+        string cpriceproduct = Console.ReadLine();
+        Priceproduct = Convert.ToInt32(cpriceproduct);
+
+        File.AppendAllLines(path, new[] { $"{Codeproduct}, {Nameproduct}, {Priceproduct}" });
+    }
+    public void AddProductPrint()
+    {
+        var AddFile = @"C:\Users\User\Desktop\HM\HW13\HW13\Product.txt";
+        AddProduct(AddFile);
+    }
 }
     
